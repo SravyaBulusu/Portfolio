@@ -1,0 +1,70 @@
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom:5px;
+  }
+  
+  /* Hamburger Open Animation */
+  .hamburger.open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Show hamburger icon */
+    }
+  
+    .nav-menu {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #333;
+      width: 200px;
+      flex-direction: column;
+      align-items: center;
+      display: none; /* Hide menu initially */
+    }
+  
+    .nav-menu.open {
+      display: flex; /* Show menu when hamburger is clicked */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #555;
+    }
+  }
+
+  .header{
+    background-color: #27445D;
+  }
+  

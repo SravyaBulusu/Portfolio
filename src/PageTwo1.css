@@ -1,0 +1,113 @@
+/* .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-items: center;
+    padding: 20px;
+  } */
+
+.page2{
+    min-height: 100vh;
+    background-color: #1A1A1D;
+
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr); /* Two cards per row */
+    row-gap: 80px;
+    column-gap: 2px;
+    /* column-gap: 0px; */
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+/* Card Styling */
+.card {
+    width: 430px;
+    height: 300px;
+    perspective: 1000px; /* Creates 3D effect */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(162, 148, 249, 1); /* Glowing outline effect */
+}
+
+.card-front {
+    background: #333;
+    padding: 10px;
+}
+
+.card-front img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-front h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.card-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 15px;
+    text-align: center;
+}
+
+.card-back a {
+    color: "white";
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card-back a svg {
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .project-container {
+        grid-template-columns: repeat(1, 1fr); /* Two cards per row for medium screens */
+    }
+}
+@media (max-width:768px){
+    .card{
+        width:400px
+    }
+}
+
+
+

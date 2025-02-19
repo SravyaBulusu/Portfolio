@@ -1,0 +1,65 @@
+/* Skills Page Styling */
+.skills-container {
+  text-align: center;
+  padding: 40px 130px;
+  background-color: #1A1A1D;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Skills Grid - 4 Columns on Laptops */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Adjust for Tablets */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust for Mobile */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small Mobile Screens */
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+

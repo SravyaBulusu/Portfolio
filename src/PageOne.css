@@ -1,0 +1,237 @@
+.page {
+  display: flex;
+  background-color: #1A1A1D;
+  flex-wrap: wrap;
+  /* max-height:700px; */
+  min-height: 100vh;
+
+}
+
+
+.typing-effect {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink 0.8s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.div1 {
+  width: 50%;
+  /* height:auto; */
+  /* width:40% */
+}
+
+.div11 {
+  margin-left: 20%;
+  margin-bottom: 20%;
+}
+
+/* .div11{
+    position: absolute;
+    left:130px;
+    top:200px;
+  } */
+.div2 {
+  /* position: absolute;
+    left:1000px;
+    top:80px */
+  /* height:auto; */
+  width: 50%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div2 img {
+  padding-bottom: 30%;
+  padding-left: 20%;
+}
+
+.name {
+  color: #A294F9;
+  text-shadow: 2px 2px 5px #A294F9;
+}
+
+.para {
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.bright-button {
+  width:100px;
+  background-color: #A294F9;
+  /* Bright base color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition */
+  box-shadow: 0 4px 12px #A294F9;
+  /* Initial glow */
+}
+
+.bright-button:hover {
+  box-shadow: 0 8px 15px #A294F9, 0 0 10px rgba(255, 255, 255, 0.7);
+  /* Stronger glow */
+  transform: scale(1.1);
+  /* Slight scaling */
+}
+
+.bright-button:active {
+  box-shadow: 0 4px 12px #A294F9;
+  /* Back to normal glow */
+  transform: scale(1);
+  /* Reset size */
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-200px) translateX(50px) scale(1);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #A294F9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #A294F9;
+  animation: sparkle 4s infinite;
+  /* Slower animation duration */
+  opacity: 0;
+}
+
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent sparkles from causing scrollbars */
+  pointer-events: none;
+  /* Allow clicks to pass through */
+}
+
+
+/* @media (max-width: 768px) {
+   .page{
+    flex-direction: column;
+   }
+  } */
+
+
+
+@media (max-width: 768px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    /* justify-content: center; 
+      align-items: center;  */
+    text-align: center;
+    background-color: #1A1A1D;
+    /* flex-wrap:wrap; */
+    justify-content: start;
+    align-items: start;
+  }
+
+  .div1 {
+    width: 100%;
+    /* Full width for content */
+    order: 2;
+    /* Move content below the image */
+    /* padding: 10px; Add some spacing */
+    margin-bottom: 0;
+    background-color: #1A1A1D;
+
+  }
+
+  .div2 {
+    width: 100%;
+    /* Full width for the image container */
+    order: 1;
+    /* Move image above the content */
+  }
+
+  .div2 img {
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+.background-circle {
+  height: 400px;
+  width: 400px;
+  background-color: #A294F9;
+  border-radius: 200px;
+  margin-left: 100px;
+  margin-bottom: 150px;
+}
+
+
+.hexagon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust as needed */
+}
+
+.hexagon {
+  width: 400px;
+  height: 500px;
+  background-color: #8a4bf6; /* Lavender color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 10px 2px #8a4bf6; /* Glowing effect */
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  clip-path: inherit;
+  opacity: 0.5;
+}
+
+.hexagon::before {
+  transform: translateY(-5px);
+}
+
+.hexagon::after {
+  transform: translateY(5px);
+}

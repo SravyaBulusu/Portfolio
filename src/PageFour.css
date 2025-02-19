@@ -1,0 +1,101 @@
+body{
+  background-color: #1A1A1D;
+}
+.div4{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.div41{
+    width:50%;
+    order:1;
+}
+.div42{
+    width:50%;
+    order:2;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}
+.box{
+    border: 1px solid #A294F9;
+    box-shadow: 1px 1px 2px #A294F9;
+    background-color: #1A1A1D;
+    height:30px;
+    width:500px;
+    color: white;
+}
+.box1{
+    border: 1px solid #A294F9;
+    box-shadow: 1px 1px 2px #A294F9;
+    background-color: #1A1A1D;
+    width:500px;
+    color: white;
+}
+.bright-button,.bright-button1 {
+    background-color: #A294F9; /* Bright base color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 12px #A294F9; /* Initial glow */
+    width:200px
+  }
+  
+  .bright-button:hover,.bright-button1:hover {
+    box-shadow: 0 8px 15px #A294F9, 0 0 10px rgba(255, 255, 255, 0.7); /* Stronger glow */
+    transform: scale(1.1); /* Slight scaling */
+  }
+  
+  .bright-button:active,.bright-button1:active {
+    box-shadow: 0 4px 12px #A294F9; /* Back to normal glow */
+    transform: scale(1); /* Reset size */
+  }
+  .bright-button1{
+    margin-top:40px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    color: #A294F9; /* Neon blue color */
+    font-size: 24px;
+    border: 2px solid #A294F9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #A294F9;
+  }
+  
+  .social-icons a:hover {
+    background-color: #A294F9;
+    color: #000;
+    box-shadow: 0 0 20px #A294F9;
+  }
+  
+  .flexbox{
+    display: flex;
+  }
+
+@media (max-width: 1500px) {
+    /* Adjust for Mobile */
+   .flexbox{
+    flex-wrap: wrap;
+    flex-direction: column;
+   }
+  } 
