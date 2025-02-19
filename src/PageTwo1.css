@@ -17,17 +17,17 @@
     display: grid;
     grid-template-columns: repeat(3, 5fr); /* Two cards per row */
     row-gap: 80px;
-    column-gap: 2px;
+    column-gap: 1px;
     /* column-gap: 0px; */
     place-items: center;
     align-content: center;
     justify-content: center;
-    /* padding: 20px; */
+    padding: 50px;
 }
 
 /* Card Styling */
 .card {
-    width: 430px;
+    width: 400px;
     height: 300px;
     perspective: 1000px; /* Creates 3D effect */
 }
