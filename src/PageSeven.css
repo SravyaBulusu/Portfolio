@@ -160,6 +160,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: justify;
+  align-items: center
 }
 
 /* Explore Button */
@@ -228,6 +229,5 @@
   height: 200px;
   animation: rotateImage 5s linear infinite;
 }
-
 
 
