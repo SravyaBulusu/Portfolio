@@ -55,5 +55,11 @@ h2 {
   }
 }
 
+@media (max-width: 480px) {
+  /* Small Mobile Screens */
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
 
 
