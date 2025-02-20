@@ -57,8 +57,12 @@ h2 {
 
 @media (max-width: 480px) {
   /* Small Mobile Screens */
+  .skills-container{
+    padding: 0;
+
+  }
   .skills-grid {
-    grid-template-columns: 1fr; /* 1 column */
+    grid-template-columns: repeat(2, 1fr);/* 1 column */
   }
 }
 
