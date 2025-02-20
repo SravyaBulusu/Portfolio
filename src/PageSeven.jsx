@@ -150,7 +150,7 @@ function PageSeven() {
 
                 {/* Right side - Text and Button */}
                 <div className="text-wrapper">
-                    <center><h1 className="fade-in" className="gupter-bold">About&nbsp;&nbsp;<span style={{color:"white"}}>Me</span></h1></center>
+                    <center><h1 className={`fade-in gupter-bold`}>About&nbsp;&nbsp;<span style={{color:"white"}}>Me</span></h1></center>
                     <p className="fade-in">
                     I am B.S.L.Sravya, a passionate developer from the Artificial Intelligence and Machine Learning department at Aditya Engineering College. With a strong foundation in development, I have worked on multiple projects that have helped me enhance my coding skills and problem-solving abilities.
 

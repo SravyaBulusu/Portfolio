@@ -1426,7 +1426,631 @@
 
 
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import emailjs from "emailjs-com";
+// import "./PageFour.css";
+
+// const ContactForm = () => {
+//   const [formData, setFormData] = useState({
+//     fullName: "",
+//     email: "",
+//     subject: "",
+//     message: "",
+//   });
+
+//   const [showToast, setShowToast] = useState(false);
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .sendForm(
+//         "service_6cca8sx",
+//         "template_igwgd4q",
+//         e.target,
+//         "g7SoOHw3pboEPlI79"
+//       )
+//       .then(
+//         (result) => {
+//           console.log("Email sent successfully: ", result.text);
+//           setFormData({
+//             fullName: "",
+//             email: "",
+//             message: "",
+//           });
+//           setShowToast(true);
+//           setTimeout(() => setShowToast(false), 3000);
+//         },
+//         (error) => {
+//           console.log("Error sending email: ", error.text);
+//         }
+//       );
+//   };
+
+//   return (
+//     <div className="contact-wrapper">
+//       <div className="contact-box">
+//         {/* Left Section */}
+//         <div className="left-box">
+//           <div className={`vertical-text`}>
+//             <span className="word">Let's</span>
+//             <span className="word1">Connect</span>
+//           </div>
+//           <div className="social-icons">
+//             <a
+//               href="https://facebook.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <i className="fab fa-facebook-f"></i>
+//             </a>
+//             <a
+//               href="https://twitter.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <i className="fab fa-twitter"></i>
+//             </a>
+//             <a
+//               href="https://instagram.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <i className="fab fa-instagram"></i>
+//             </a>
+//             <a
+//               href="https://linkedin.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <i className="fab fa-linkedin-in"></i>
+//             </a>
+//           </div>
+//           <a href="Resume.pdf"
+//             download="Sravya_Resume.pdf"><button className="bright-button1">Download Resume</button></a>
+//         </div>
+
+//         {/* Right Section */}
+//         <div className="right-box">
+//           {showToast && <div className="toast">Message Sent!</div>}
+
+//           <form onSubmit={handleSubmit}>
+//             <div className="input-group">
+//               <input
+//                 type="text"
+//                 name="fullName"
+//                 placeholder="Full Name"
+//                 value={formData.fullName}
+//                 onChange={handleChange}
+//                 required
+//               />
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email Address"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//               />
+//             </div>
+//             <input
+//               type="text"
+//               name="subject"
+//               placeholder="Email Subject"
+//               value={formData.subject}
+//               onChange={handleChange}
+//               required />
+//             <textarea
+//               name="message"
+//               placeholder="Your Message"
+//               value={formData.message}
+//               onChange={handleChange}
+//               required
+//             />
+
+//             <center>
+//               <button type="submit" className="bright-button" style={{ marginTop: 15 }}>
+//                 Send Message
+//               </button>
+//             </center>
+//           </form>
+//         </div>
+//       </div>
+
+//       {/* Inline styling for convenience, can remain in PageFour.css */}
+//       <style jsx>{`
+//         .contact-wrapper {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           height: 100vh;
+//           background-color: #1A1A1D;
+//           padding: 20px;
+
+//         }
+
+//         .contact-box {
+//           display: flex;
+//           flex-direction: row;
+//           background: #181818;
+//           padding: 40px;
+//           border-radius: 15px;
+//           max-width: 1000px;
+//           width: 100%;
+//           margin: auto;
+//           box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+//         }
+
+//         .left-box,
+//         .right-box {
+//           flex: 1;
+//           text-align: center;
+//           padding: 20px;
+//         }
+
+//         .left-box {
+//           border-right: 2px solid rgba(255, 255, 255, 0.1);
+//         }
+
+//         .vertical-text {
+//           display: flex;
+//           flex-direction: column;
+//           font-size: 60px;
+//           font-weight: bold;
+//           text-align: center;
+//           margin-bottom: 20px;
+//           text-transform: uppercase;
+//         }
+
+//         .word {
+//           line-height: 1.6;
+//           color: #a294f9;
+//         }
+
+//         .word1 {
+//           line-height: 1.6;
+//           color: white;
+//         }
+
+//         .social-icons {
+//           display: flex;
+//           justify-content: center;
+//           gap: 15px;
+//           margin-bottom: 20px;
+//         }
+
+//         .social-icons a {
+//           color: white;
+//           font-size: 24px;
+//           transition: transform 0.3s ease, box-shadow 0.3s ease;
+//         }
+
+//         .social-icons a:hover {
+//           transform: scale(1.1);
+//           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+//         }
+
+//         .bright-button1 {
+//           background-color: #a294f9;
+//           color: white;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           font-size: 18px;
+//           transition: all 0.3s ease;
+//         }
+
+//         .bright-button1:hover {
+//           background: #8b7ff2;
+//           transform: scale(1.05);
+//         }
+
+//         .right-box form {
+//           display: flex;
+//           flex-direction: column;
+//           gap: 15px;
+//         }
+
+//         .input-group {
+//           display: flex;
+//           flex-direction:column;
+//           gap: 20px;
+//         }
+
+//         input,
+//         textarea {
+//           width: 100%;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           background: #333;
+//           color: white;
+//           font-size: 16px;
+//         }
+
+//         textarea {
+//           height: 120px;
+//           resize: none;
+//           margin-top:15px
+//         }
+
+//         .bright-button {
+//           background-color: #a294f9;
+//           color: white;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           font-size: 18px;
+//           transition: all 0.3s ease;
+//         }
+
+//         .bright-button:hover {
+//           background: #8b7ff2;
+//           transform: scale(1.05);
+//         }
+
+//         .toast {
+//           position: fixed;
+//           top: 10px;
+//           right: 20px;
+//           background-color: black;
+//           color: white;
+//           padding: 10px 20px;
+//           border-radius: 5px;
+//           font-size: 16px;
+//           z-index: 1000;
+//           border: 2px solid #a294f9;
+//           opacity: 0.9;
+//         }
+
+//         @media (max-width: 768px) {
+//           .contact-box {
+//             flex-direction: column;
+//             text-align: center;
+//           }
+
+//           .left-box {
+//             border-right: none;
+//             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+//             padding-bottom: 20px;
+//           }
+
+//           .input-group {
+//             flex-direction: column;
+//           }
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default ContactForm;
+
+
+
+
+
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
+// import emailjs from "emailjs-com";
+// import "./PageFour.css";
+
+// const ContactForm = () => {
+//   const [formData, setFormData] = useState({
+//     fullName: "",
+//     email: "",
+//     subject: "",
+//     message: "",
+//   });
+
+//   const [showToast, setShowToast] = useState(false);
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .sendForm(
+//         "service_6cca8sx",
+//         "template_igwgd4q",
+//         e.target,
+//         "g7SoOHw3pboEPlI79"
+//       )
+//       .then(
+//         (result) => {
+//           console.log("Email sent successfully: ", result.text);
+//           setFormData({
+//             fullName: "",
+//             email: "",
+//             message: "",
+//           });
+//           setShowToast(true);
+//           setTimeout(() => setShowToast(false), 3000);
+//         },
+//         (error) => {
+//           console.log("Error sending email: ", error.text);
+//         }
+//       );
+//   };
+
+//   return (
+//     <motion.div
+//       className="contact-wrapper"
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       transition={{ duration: 1 }}
+//     >
+//       <motion.div
+//         className="contact-box"
+//         initial={{ opacity: 0, y: 50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 1, ease: "easeOut" }}
+//       >
+//         {/* Left Section */}
+//         <motion.div
+//           className="left-box"
+//           initial={{ opacity: 0, x: -50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+//         >
+//           <div className="vertical-text">
+//             <span className="word">Let's</span>
+//             <span className="word1">Connect</span>
+//           </div>
+//           <div className="social-icons">
+//             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+//               <i className="fab fa-facebook-f"></i>
+//             </a>
+//             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+//               <i className="fab fa-twitter"></i>
+//             </a>
+//             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+//               <i className="fab fa-instagram"></i>
+//             </a>
+//             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+//               <i className="fab fa-linkedin-in"></i>
+//             </a>
+//           </div>
+//           <a href="Resume.pdf" download="Sravya_Resume.pdf">
+//             <button className="bright-button1">Download Resume</button>
+//           </a>
+//         </motion.div>
+
+//         {/* Right Section */}
+//         <motion.div
+//           className="right-box"
+//           initial={{ opacity: 0, x: 50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+//         >
+//           {showToast && <div className="toast">Message Sent!</div>}
+
+//           <form onSubmit={handleSubmit}>
+//             <div className="input-group">
+//               <input
+//                 type="text"
+//                 name="fullName"
+//                 placeholder="Full Name"
+//                 value={formData.fullName}
+//                 onChange={handleChange}
+//                 required
+//               />
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email Address"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//               />
+//             </div>
+//             <input
+//               type="text"
+//               name="subject"
+//               placeholder="Email Subject"
+//               value={formData.subject}
+//               onChange={handleChange}
+//               required
+//             />
+//             <textarea
+//               name="message"
+//               placeholder="Your Message"
+//               value={formData.message}
+//               onChange={handleChange}
+//               required
+//             />
+
+//             <center>
+//               <button type="submit" className="bright-button" style={{ marginTop: 15 }}>
+//                 Send Message
+//               </button>
+//             </center>
+//           </form>
+//         </motion.div>
+//       </motion.div>
+//       <style jsx>{`
+//         .contact-wrapper {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           height: 100vh;
+//           background-color: #1A1A1D;
+//           padding: 20px;
+          
+//         }
+
+//         .contact-box {
+//           display: flex;
+//           flex-direction: row;
+//           background: #181818;
+//           padding: 40px;
+//           border-radius: 15px;
+//           max-width: 1000px;
+//           width: 100%;
+//           margin: auto;
+//           box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+//         }
+
+//         .left-box,
+//         .right-box {
+//           flex: 1;
+//           text-align: center;
+//           padding: 20px;
+//         }
+
+//         .left-box {
+//           border-right: 2px solid rgba(255, 255, 255, 0.1);
+//         }
+
+//         .vertical-text {
+//           display: flex;
+//           flex-direction: column;
+//           font-size: 60px;
+//           font-weight: bold;
+//           text-align: center;
+//           margin-bottom: 20px;
+//           text-transform: uppercase;
+//         }
+
+//         .word {
+//           line-height: 1.6;
+//           color: #a294f9;
+//         }
+
+//         .word1 {
+//           line-height: 1.6;
+//           color: white;
+//         }
+
+//         .social-icons {
+//           display: flex;
+//           justify-content: center;
+//           gap: 15px;
+//           margin-bottom: 20px;
+//         }
+
+//         .social-icons a {
+//           color: white;
+//           font-size: 24px;
+//           transition: transform 0.3s ease, box-shadow 0.3s ease;
+//         }
+
+//         .social-icons a:hover {
+//           transform: scale(1.1);
+//           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+//         }
+
+//         .bright-button1 {
+//           background-color: #a294f9;
+//           color: white;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           font-size: 18px;
+//           transition: all 0.3s ease;
+//         }
+
+//         .bright-button1:hover {
+//           background: #8b7ff2;
+//           transform: scale(1.05);
+//         }
+
+//         .right-box form {
+//           display: flex;
+//           flex-direction: column;
+//           gap: 15px;
+//         }
+
+//         .input-group {
+//           display: flex;
+//           flex-direction:column;
+//           gap: 20px;
+//         }
+
+//         input,
+//         textarea {
+//           width: 100%;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           background: #333;
+//           color: white;
+//           font-size: 16px;
+//         }
+
+//         textarea {
+//           height: 120px;
+//           resize: none;
+//           margin-top:15px
+//         }
+
+//         .bright-button {
+//           background-color: #a294f9;
+//           color: white;
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           font-size: 18px;
+//           transition: all 0.3s ease;
+//         }
+
+//         .bright-button:hover {
+//           background: #8b7ff2;
+//           transform: scale(1.05);
+//         }
+
+//         .toast {
+//           position: fixed;
+//           top: 10px;
+//           right: 20px;
+//           background-color: black;
+//           color: white;
+//           padding: 10px 20px;
+//           border-radius: 5px;
+//           font-size: 16px;
+//           z-index: 1000;
+//           border: 2px solid #a294f9;
+//           opacity: 0.9;
+//         }
+
+//         @media (max-width: 768px) {
+//           .contact-box {
+//             flex-direction: column;
+//             text-align: center;
+//           }
+
+//           .left-box {
+//             border-right: none;
+//             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+//             padding-bottom: 20px;
+//           }
+
+//           .input-group {
+//             flex-direction: column;
+//           }
+//         }
+//       `}</style>
+//     </motion.div>
+//   );
+// };
+
+// export default ContactForm;
+
+
+
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import emailjs from "emailjs-com";
 import "./PageFour.css";
 
@@ -1439,6 +2063,10 @@ const ContactForm = () => {
   });
 
   const [showToast, setShowToast] = useState(false);
+
+  // Ref for the section
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -1460,6 +2088,7 @@ const ContactForm = () => {
           setFormData({
             fullName: "",
             email: "",
+            subject: "",
             message: "",
           });
           setShowToast(true);
@@ -1472,50 +2101,56 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-wrapper">
-      <div className="contact-box">
+    <motion.div
+      ref={ref}
+      className="contact-wrapper"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <motion.div
+        className="contact-box"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         {/* Left Section */}
-        <div className="left-box">
+        <motion.div
+          className="left-box"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        >
           <div className="vertical-text">
             <span className="word">Let's</span>
             <span className="word1">Connect</span>
           </div>
           <div className="social-icons">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
-          <a href="Resume.pdf"
-            download="Sravya_Resume.pdf"><button className="bright-button1">Download Resume</button></a>
-        </div>
+          <a href="Resume.pdf" download="Sravya_Resume.pdf">
+            <button className="bright-button1">Download Resume</button>
+          </a>
+        </motion.div>
 
         {/* Right Section */}
-        <div className="right-box">
+        <motion.div
+          className="right-box"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        >
           {showToast && <div className="toast">Message Sent!</div>}
 
           <form onSubmit={handleSubmit}>
@@ -1543,7 +2178,8 @@ const ContactForm = () => {
               placeholder="Email Subject"
               value={formData.subject}
               onChange={handleChange}
-              required />
+              required
+            />
             <textarea
               name="message"
               placeholder="Your Message"
@@ -1558,10 +2194,8 @@ const ContactForm = () => {
               </button>
             </center>
           </form>
-        </div>
-      </div>
-
-      {/* Inline styling for convenience, can remain in PageFour.css */}
+        </motion.div>
+      </motion.div>
       <style jsx>{`
         .contact-wrapper {
           display: flex;
@@ -1570,6 +2204,7 @@ const ContactForm = () => {
           height: 100vh;
           background-color: #1A1A1D;
           padding: 20px;
+          
         }
 
         .contact-box {
@@ -1724,8 +2359,9 @@ const ContactForm = () => {
             flex-direction: column;
           }
         }
+        
       `}</style>
-    </div>
+    </motion.div>
   );
 };
 
