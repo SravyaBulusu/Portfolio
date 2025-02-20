@@ -256,7 +256,9 @@ function Header({ scrollToSection }) {
 
   return (
     <header className="header">
-      <h1 className="logo">My Portfolio</h1>
+      <div style={{display:"flex"}}>
+      <img src="logo2.png" style={{height:70,width:70,marginTop:10,marginLeft:20}}/><p style={{marginTop:30,fontSize:25,fontWeight:"bold"}}>ravya</p>
+      </div>
       
       {/* Hamburger Icon */}
       <div 
@@ -269,7 +271,7 @@ function Header({ scrollToSection }) {
       </div>
 
       {/* Navigation Menu */}
-      <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
+      <nav className={`nav-menu ${menuOpen ? "open" : ""} cabin`}>
         <ul className="nav-links">
           <li className={activeLink === "pageOne" ? "active" : ""} onClick={() => handleNavClick("pageOne")}>Home</li>
           <li className={activeLink === "pageSeven" ? "active" : ""} onClick={() => handleNavClick("pageSeven")}>About</li>
@@ -278,7 +280,7 @@ function Header({ scrollToSection }) {
           <li className={activeLink === "pageSix" ? "active" : ""} onClick={() => handleNavClick("pageSix")}>Certifications</li>
           <li className={activeLink === "pageFour" ? "active" : ""} onClick={() => handleNavClick("pageFour")}>Contact</li>
         </ul>
-        <div className="nav-indicator"></div>
+        {/* <div className="nav-indicator" style={{backgroundColor:"#A294F9"}}></div> */}
       </nav>
     </header>
   );

@@ -67,8 +67,8 @@ const certifications = [
 
 const Certifications = () => {
     return (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#1A1A1D" }}>
-            <div style={{ backgroundColor: '#1A1A1D', color: 'white', padding: '20px', width: 1300 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", background:"linear-gradient(to right, #1A1A1D, #191970)" }}>
+            <div style={{ color: 'white', padding: '20px', width: 1300 }}>
                 <center><h2 className='gupter-bold'>Certifications</h2></center>
                 {certifications.map((cert, index) => {
                     const ref = useRef(null);
@@ -81,8 +81,8 @@ const Certifications = () => {
                             initial={{ opacity: 0, y: 50 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            style={{ marginBottom: '20px' }}
-                            className='gupter-regular1'
+                            style={{ marginBottom: '20px',fontSize:22 }}
+                            className='cabin'
                         >
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <span style={{ marginRight: '20px' }}>{cert.number}</span>
@@ -92,10 +92,10 @@ const Certifications = () => {
                                     download
                                     style={{
                                         color: 'white',
-                                        backgroundColor: '#A294F9',
+                                        backgroundColor: '#87CEEB',
                                         padding: '5px 10px',
                                         textDecoration: 'none',
-                                        borderRadius: '5px',
+                                        borderRadius: '1px',
                                     }}
                                 >
                                     Download
@@ -103,11 +103,11 @@ const Certifications = () => {
                             </div>
                             {index < certifications.length - 1 && (
                                 <hr style={{
-                                    borderColor: '#8a4bf6',
+                                    borderColor: "white",
                                     marginTop: '40px',
                                     borderWidth: '1px',
                                     borderStyle: 'solid',
-                                    boxShadow: '0 0 3px 1px #A294F9', // Glow effect
+                                    boxShadow: '0 0 3px 1px #87CEEB', // Glow effect
                                 }} />
                             )}
                         </motion.div>

@@ -1,6 +1,7 @@
 .page {
   display: flex;
-  background-color: #1A1A1D;
+  /* background-color: white; */
+  background:linear-gradient(to right, #1A1A1D, #191970);
   flex-wrap: wrap;
   /* max-height:700px; */
   min-height: 100vh;
@@ -63,8 +64,8 @@
 }
 
 .name {
-  color: #A294F9;
-  text-shadow: 2px 2px 5px #A294F9;
+  color: #87CEEB;
+  text-shadow: 2px 2px 5px #87CEEB;
 }
 
 .para {
@@ -72,9 +73,9 @@
   line-height: 50px;
 }
 
-.bright-button {
+.bright-button1 {
   width:100px;
-  background-color: #A294F9;
+  background-color: #87CEEB;
   /* Bright base color */
   color: white;
   padding: 10px 20px;
@@ -84,19 +85,19 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   /* Smooth transition */
-  box-shadow: 0 4px 12px #A294F9;
+  box-shadow: 0 4px 12px #87CEEB;
   /* Initial glow */
 }
 
-.bright-button:hover {
-  box-shadow: 0 8px 15px #A294F9, 0 0 10px rgba(255, 255, 255, 0.7);
+.bright-button1:hover {
+  box-shadow: 0 8px 15px #87CEEB, 0 0 10px rgba(255, 255, 255, 0.7);
   /* Stronger glow */
   transform: scale(1.1);
   /* Slight scaling */
 }
 
-.bright-button:active {
-  box-shadow: 0 4px 12px #A294F9;
+.bright-button1:active {
+  box-shadow: 0 4px 12px #87CEEB;
   /* Back to normal glow */
   transform: scale(1);
   /* Reset size */
@@ -118,9 +119,9 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #A294F9;
+  background-color: #87CEEB;
   border-radius: 50%;
-  box-shadow: 0 0 10px #A294F9;
+  box-shadow: 0 0 10px #87CEEB;
   animation: sparkle 4s infinite;
   /* Slower animation duration */
   opacity: 0;
@@ -185,57 +186,7 @@
     }
   }
   
-.background-circle {
-  height: 400px;
-  width: 400px;
-  background-color: #A294F9;
-  border-radius: 200px;
-  margin-left: 100px;
-  margin-bottom: 150px;
-}
 
-
-.hexagon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px; /* Adjust as needed */
-}
-
-.hexagon {
-  width: 400px;
-  height: 500px;
-  background-color: #8a4bf6; /* Lavender color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  position: relative;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  box-shadow: 0 0 10px 2px #8a4bf6; /* Glowing effect */
-}
-
-.hexagon::before,
-.hexagon::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  clip-path: inherit;
-  opacity: 0.5;
-}
-
-.hexagon::before {
-  transform: translateY(-5px);
-}
-
-.hexagon::after {
-  transform: translateY(5px);
-}
 
 @media (max-width: 768px) { /* Adjust for mobile screens */
   .div2 {

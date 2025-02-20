@@ -78,14 +78,14 @@ function PageOne() {
 
   // Existing JSX return here
   return (
-    <div className="gupter-regular">
+    <div className="cabin">
 
       <div
         className="page"
         style={{
           // height: '100vh',
           width: '100%',
-          backgroundColor: "#1A1A1D",
+          // backgroundColor:"linear-gradient(to right, #1A1A1D, #191970)",
           color: "white",
           display: "flex",
           flexDirection: "row",
@@ -115,18 +115,17 @@ function PageOne() {
             <a
               href="Resume.pdf"
               download="Sravya_Resume.pdf"
-              className="bright-button"
+              className="bright-button1"
               style={{
                 marginTop: 20,
-                padding: "10px 20px",
-                backgroundColor: "#A294F9",
+                // padding: "10px 20px",
+                backgroundColor: "#87CEEB",
                 color: "white",
                 textDecoration: "none",
                 borderRadius: 5,
                 fontSize: 16,
                 fontWeight: "bold",
                 width: "130px"
-
               }}
             >
               Download Resume
@@ -137,10 +136,10 @@ function PageOne() {
           {/* <img src="home_page.png" style={{ height: 500, width: 500 }} /> */}
           {/* <img src="myphoto.png"/> */}
           <DotLottieReact
-            src="animation.json"
+            src="lottie_blue.json"
             loop
             autoplay
-            style={{height:500,width:1700,position:"relative",top:-100}}
+            style={{height:500,width:1400,position:"relative",top:-100}}
           />
 
         </div>

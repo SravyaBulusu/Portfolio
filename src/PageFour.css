@@ -37,7 +37,7 @@ body{
     color: white;
 }
 .bright-button,.bright-button1 {
-    background-color: #A294F9; /* Bright base color */
+    background-color: #87CEEB; /* Bright base color */
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -45,17 +45,17 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out; /* Smooth transition */
-    box-shadow: 0 4px 12px #A294F9; /* Initial glow */
+    box-shadow: 0 4px 12px #87CEEB; /* Initial glow */
     width:200px
   }
   
   .bright-button:hover,.bright-button1:hover {
-    box-shadow: 0 8px 15px #A294F9, 0 0 10px rgba(255, 255, 255, 0.7); /* Stronger glow */
+    box-shadow: 0 8px 15px #87CEEB, 0 0 10px rgba(255, 255, 255, 0.7); /* Stronger glow */
     transform: scale(1.1); /* Slight scaling */
   }
   
   .bright-button:active,.bright-button1:active {
-    box-shadow: 0 4px 12px #A294F9; /* Back to normal glow */
+    box-shadow: 0 4px 12px #87CEEB; /* Back to normal glow */
     transform: scale(1); /* Reset size */
   }
   .bright-button1{
@@ -69,9 +69,9 @@ body{
   
   .social-icons a {
     text-decoration: none;
-    color: #A294F9; /* Neon blue color */
+    color: #87CEEB; /* Neon blue color */
     font-size: 24px;
-    border: 2px solid #A294F9;
+    border: 2px solid #87CEEB;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -79,13 +79,13 @@ body{
     align-items: center;
     justify-content: center;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px #A294F9;
+    box-shadow: 0 0 10px #87CEEB;
   }
   
   .social-icons a:hover {
-    background-color: #A294F9;
+    background-color: #87CEEB;
     color: #000;
-    box-shadow: 0 0 20px #A294F9;
+    box-shadow: 0 0 20px #87CEEB;
   }
   
   .flexbox{

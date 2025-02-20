@@ -9,7 +9,8 @@
 
 .page2{
     min-height: 100vh;
-    background-color: #1A1A1D;
+    /* background-color: #1A1A1D; */
+    background:linear-gradient(to right, #1A1A1D, #191970);
 
 }
 
@@ -54,7 +55,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px 1px rgba(162, 148, 249, 1); /* Glowing outline effect */
+    /* box-shadow: 5px 5px 10px 1px rgba(162, 148, 249, 1); Glowing outline effect */
+    box-shadow: 5px 5px 5px 1px rgba(135, 206, 235, 0.8); /* Sky Blue Glow */
+
 }
 
 .card-front {

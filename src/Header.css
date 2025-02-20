@@ -63,4 +63,36 @@
       border-bottom: 1px solid #555;
     }
   }
+.header{
+  background:linear-gradient(to right, #1A1A1D, #191970);
+}
 
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjust spacing between items */
+}
+
+.nav-links li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Default inactive state */
+.nav-links li {
+  color: white; /* Default text color */
+}
+
+/* Active state - Change text color & add a background */
+.nav-links li.active {
+  color: #87CEEB; /* Sky Blue */
+  font-weight: bold;
+  border-bottom: 3px solid #87CEEB; /* Adds an underline effect */
+}
+
+/* Optional hover effect */
+.nav-links li:hover {
+  color: #87CEEB;
+}

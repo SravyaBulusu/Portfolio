@@ -2189,7 +2189,7 @@ const ContactForm = () => {
             />
 
             <center>
-              <button type="submit" className="bright-button" style={{ marginTop: 15 }}>
+              <button type="submit" className="bright-button1" style={{ marginTop: 15 }}>
                 Send Message
               </button>
             </center>
@@ -2202,7 +2202,8 @@ const ContactForm = () => {
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background-color: #1A1A1D;
+          // background-color: #1A1A1D;
+          background:linear-gradient(to right, #1A1A1D, #191970);
           padding: 20px;
           
         }
@@ -2242,7 +2243,7 @@ const ContactForm = () => {
 
         .word {
           line-height: 1.6;
-          color: #a294f9;
+          color: #87CEEB;
         }
 
         .word1 {
@@ -2269,7 +2270,7 @@ const ContactForm = () => {
         }
 
         .bright-button1 {
-          background-color: #a294f9;
+          background-color: #87CEEB;
           color: white;
           padding: 12px;
           border: none;
@@ -2280,7 +2281,7 @@ const ContactForm = () => {
         }
 
         .bright-button1:hover {
-          background: #8b7ff2;
+          background: #87CEEB;
           transform: scale(1.05);
         }
 
@@ -2313,8 +2314,8 @@ const ContactForm = () => {
           margin-top:15px
         }
 
-        .bright-button {
-          background-color: #a294f9;
+        .bright-button1 {
+          background-color: #87CEEB;
           color: white;
           padding: 12px;
           border: none;
@@ -2325,7 +2326,7 @@ const ContactForm = () => {
         }
 
         .bright-button:hover {
-          background: #8b7ff2;
+          background: #87CEEB;
           transform: scale(1.05);
         }
 
@@ -2339,7 +2340,7 @@ const ContactForm = () => {
           border-radius: 5px;
           font-size: 16px;
           z-index: 1000;
-          border: 2px solid #a294f9;
+          border: 2px solid #87CEEB;
           opacity: 0.9;
         }
 

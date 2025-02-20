@@ -130,7 +130,8 @@
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background-color: #1A1A1D;
+  /* background-color: #1A1A1D; */
+  background:linear-gradient(to right, #1A1A1D, #191970);
   padding: 20px;
 }
 
@@ -164,8 +165,8 @@
 }
 
 /* Explore Button */
-.explore-btn {
-  background-color: #A294F9;
+/* .explore-btn {
+  background-color: #A7D0FF;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -177,6 +178,39 @@
   gap: 10px;
   margin-top: 15px;
   width:150px
+} */
+.explore-btn {
+  width:150px;
+  background-color: #87CEEB;
+  /* Bright base color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition */
+  box-shadow: 0 4px 5px #87CEEB;
+  /* Initial glow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.explore-btn:hover {
+  box-shadow: 0 8px 15px #87CEEB, 0 0 5px rgba(255, 255, 255, 0.7);
+  /* Stronger glow */
+  transform: scale(1.1);
+  /* Slight scaling */
+}
+
+.explore-button:active {
+  box-shadow: 0 4px 5px #87CEEB;
+  /* Back to normal glow */
+  transform: scale(1);
+  /* Reset size */
 }
 
 /* Arrow Icon */

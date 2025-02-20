@@ -201,7 +201,7 @@ const ProjectCards = () => {
                 <h3 style={{ color: "white" }}>{project.title}</h3>
               </div>
               <div className="card-back">
-                <p style={{ fontSize: 22, lineHeight: 1.8 }} className="mulish">
+                <p style={{ fontSize: 22, lineHeight: 1.8 }} className="cabin">
                   {project.description}
                 </p>
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -210,7 +210,7 @@ const ProjectCards = () => {
                       height: 40,
                       width: 40,
                       borderRadius: 50,
-                      backgroundColor: "#A294F9",
+                      backgroundColor: "#87CEEB",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",

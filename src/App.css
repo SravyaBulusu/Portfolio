@@ -45,8 +45,8 @@
   font-family: "Grey Qo", serif;
   font-weight: 400;
   font-style: normal;
-  color: #A294F9;  
-    text-shadow: 2px 2px 2px #A294F9;
+  color: #87CEEB;  
+    text-shadow: 2px 2px 2px #87CEEB;
     font-size: 28px;
 }
 
@@ -54,8 +54,8 @@
   font-family: "Gupter", serif;
   font-weight: 400;
   font-style: normal;
-  color: #A294F9;  
-  text-shadow: 2px 2px 2px #A294F9;
+  color: #87CEEB;  
+  text-shadow: 2px 2px 2px #87CEEB;
   font-size: 35px;
 }
 .gupter-regular1 {
@@ -77,8 +77,8 @@
   font-family: "Gupter", serif;
   font-weight: 700;
   font-style: normal;
-  color: #A294F9;  
-  text-shadow: 2px 2px 2px #A294F9;
+  color: #87CEEB;  
+  text-shadow: 2px 2px 2px #87CEEB;
   font-size: 35px;
 }
 
@@ -88,12 +88,33 @@
   /* font-weight:bold; */
   font-style: normal;
 }
-.roboto {
-  font-family: "Roboto", serif;
+/* .grechen-fuemen-regular {
+  font-family: "Grechen Fuemen", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
+
+.cabin{
+  font-family: "Cabin", serif;
   font-optical-sizing: auto;
-  font-weight: bold;
+  /* font-weight: <weight; */
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
 }
 
+.cabin1{
+  font-family: "Cabin", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+body{
+  background:linear-gradient(to right, #1A1A1D, #191970);
+}
