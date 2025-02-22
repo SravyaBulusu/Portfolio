@@ -199,20 +199,26 @@
 
 
 @media (max-width: 768px) { /* Adjust for mobile screens */
+  .page{
+    min-height: 80vh;
+  }
   .div1{
     margin-top: 0;
+    /* background-color: red; */
+    margin-bottom: 50px;
   }
   .div2 {
     display: none; /* Hides the animation on small screens */
+    /* background-color: red; */
   }
   .name{
-    font-size: 32px;
+    font-size: 40px;
   }
   .hello{
-    font-size: 32px;
+    font-size: 40px;
   }
   .typing-effect{
-    font-size: 28px;
+    font-size: 32px;
   }
   .para{
     font-size: 20px;
