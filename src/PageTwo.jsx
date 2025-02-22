@@ -161,7 +161,7 @@ const projects = [
   },
   {
     title: "Mini Quiz GUI",
-    image: "project4.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoSc5woOmLWZmDnbd_Zh4yazTPeiKyc7VbA&s",
     description: "A graphical quiz application with a database-backed question system, allowing users to answer questions and track scores. Built using Java, MySQL",
     github: "https://github.com/user/project4",
   },

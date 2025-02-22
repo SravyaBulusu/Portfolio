@@ -2123,7 +2123,7 @@ const ContactForm = () => {
         >
           <div className="vertical-text">
             <span className="merriweather-black" style={{lineHeight: 1.6,color: "#87CEEB",fontSize:60}}>Let's</span>
-            <span className="merriweather-black" style={{lineHeight: 1.6,color: "#87CEEB",fontSize:60}}>Connect</span>
+            <span className="merriweather-black" style={{lineHeight: 1.6,color: "white",fontSize:60}}>Connect</span>
           </div>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
