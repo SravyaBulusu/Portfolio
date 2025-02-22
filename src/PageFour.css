@@ -221,8 +221,26 @@ body{
     z-index: 1000;
     border: 2px solid #87CEEB;
     opacity: 0.9;
+    animation: slide-in-out 3s ease-in-out forwards;
   }
-
+  @keyframes slide-in-out {
+    0% {
+        transform: translateX(100vw); /* Start far right */
+        opacity: 0;
+    }
+    20% {
+        transform: translateX(0); /* Move to normal position */
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(0); /* Stay visible */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw); /* Move out to right */
+        opacity: 0;
+    }
+}
   @media (max-width: 768px) {
     .contact-box {
       flex-direction: column;
@@ -242,11 +260,14 @@ body{
   }
 
   .lets{
-    line-height: 1.6;
+    line-height: 1.6 !important;
     /* color: "#87CEEB"; */
-    font-size:60;
-    color:"red"
+    font-size:60 !important;
+    color:"red" !important
   }
   @media (max-width: 400px){
+    .toast{
+      top:100px;
+    }
     
   }
