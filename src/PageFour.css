@@ -211,7 +211,7 @@ body{
 
   .toast {
     position: fixed;
-    top: 10px;
+    top: 100px;
     right: 20px;
     background-color: black;
     color: white;
@@ -259,12 +259,8 @@ body{
     }
   }
 
-  .lets{
-    line-height: 1.6 !important;
-    /* color: "#87CEEB"; */
-    font-size:60 !important;
-    color:"red" !important
-  }
+  
+  
   @media (max-width: 400px){
     .toast{
       top:100px;
