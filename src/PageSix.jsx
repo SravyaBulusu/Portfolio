@@ -69,7 +69,7 @@ const Certifications = () => {
     return (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", background:"linear-gradient(to right, #1A1A1D, #191970)" }}>
             <div style={{ color: 'white', padding: '20px', width: 1300 }}>
-                <center><h2 className='gupter-bold'>Certifications</h2></center>
+                <center><h2 className='merriweather-black'>Certifications</h2></center>
                 {certifications.map((cert, index) => {
                     const ref = useRef(null);
                     const isInView = useInView(ref, { once: true });

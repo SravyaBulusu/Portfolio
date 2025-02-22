@@ -177,14 +177,14 @@ const ProjectCards = () => {
   return (
     <div className="page2">
       <center>
-        <h1 className="gupter-bold">
-          <span style={{ color: "white" }}>My</span> Projects
+        <h1 className="merriweather-black">
+          <span style={{color:"white"}}>My</span> Projects
         </h1>
       </center>
       <div className="project-container">
         {projects.map((project, index) => (
           <motion.div
-            className="card"
+            className={`card cabin`}
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +198,7 @@ const ProjectCards = () => {
                   alt={project.title}
                   className="project-image"
                 />
-                <h3 style={{ color: "white" }}>{project.title}</h3>
+                <h3 style={{ color: "white",fontSize:20}}>{project.title}</h3>
               </div>
               <div className="card-back">
                 <p style={{ fontSize: 22, lineHeight: 1.8 }} className="cabin">

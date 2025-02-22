@@ -112,7 +112,29 @@
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+  color: #87CEEB;
+  text-shadow: 2px 2px 2px #87CEEB;
+  font-size: 28px;
 }
+.raleway{
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 28px;
+  color: #87CEEB;
+  text-shadow: 2px 2px 2px #87CEEB;
+
+}
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 32px;
+  color: #87CEEB;
+  text-shadow: 2px 2px 2px #87CEEB;
+}
+
 
 
 body{

@@ -256,7 +256,7 @@ function Header({ scrollToSection }) {
 
   return (
     <header className="header">
-      <div style={{display:"flex"}}>
+      <div style={{display:"flex"}} className="cabin">
       <img src="logo2.png" style={{height:70,width:70,marginTop:10,marginLeft:20}}/><p style={{marginTop:30,fontSize:25,fontWeight:"bold"}}>ravya</p>
       </div>
       

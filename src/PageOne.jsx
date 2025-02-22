@@ -46,7 +46,7 @@ function PageOne() {
 
 
 
-  const texts = ["Welcome!", "This is my portfolio.", "I am a Full Stack Dev."]; // Texts to display
+  const texts = ["I am a Web Developer.","I am AI Enthusiast"]; // Texts to display
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -96,8 +96,8 @@ function PageOne() {
         <div id="sparkle-container" className="sparkle-container" ></div>
         <div className="div1">
           <div className="div11">
-            <h1 style={{ fontSize: 40 }}>Hello, it's Me</h1>
-            <h1 style={{ fontSize: 50 }} className="name">
+            <h1 className="hello">Hello, it's Me</h1>
+            <h1 className="name">
               Sravya Bulusu
             </h1>
             <h1 className="typing-effect">
@@ -112,6 +112,7 @@ function PageOne() {
             </p>
             <br />
             {/* Download Resume Button */}
+
             <a
               href="Resume.pdf"
               download="Sravya_Resume.pdf"
@@ -130,6 +131,9 @@ function PageOne() {
             >
               Download Resume
             </a>
+
+           
+
           </div>
         </div>
         <div className="div2">

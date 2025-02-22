@@ -66,6 +66,7 @@
 .name {
   color: #87CEEB;
   text-shadow: 2px 2px 5px #87CEEB;
+  font-size: 50px;
 }
 
 .para {
@@ -85,7 +86,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   /* Smooth transition */
-  box-shadow: 0 4px 12px #87CEEB;
+  box-shadow: 0 4px 2px #87CEEB;
   /* Initial glow */
 }
 
@@ -102,6 +103,11 @@
   transform: scale(1);
   /* Reset size */
 }
+
+
+
+
+/*  */
 
 @keyframes sparkle {
   0% {
@@ -185,11 +191,27 @@
       max-width: 80%; /* Adjust image size */
     }
   }
+
+  .hello{
+    font-size: 40px;
+  }
   
 
 
 @media (max-width: 768px) { /* Adjust for mobile screens */
   .div2 {
     display: none; /* Hides the animation on small screens */
+  }
+  .name{
+    font-size: 32px;
+  }
+  .hello{
+    font-size: 32px;
+  }
+  .typing-effect{
+    font-size: 28px;
+  }
+  .para{
+    font-size: 20px;
   }
 }

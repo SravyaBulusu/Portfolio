@@ -150,16 +150,21 @@ function PageSeven() {
 
                 {/* Right side - Text and Button */}
                 <div className="text-wrapper">
-                    <center><h1 className={`fade-in gupter-bold`}>About&nbsp;&nbsp;<span style={{color:"white"}}>Me</span></h1></center>
-                    <p className="fade-in">
+                    <center><h1 className={`fade-in merriweather-black`}>About&nbsp;&nbsp;<span style={{color:"white"}}>Me</span></h1></center>
+                    <div className="fade-in">
+                    <p className="cabin">
                     I am B.S.L.Sravya, a passionate developer from the Artificial Intelligence and Machine Learning department at Aditya Engineering College. With a strong foundation in development, I have worked on multiple projects that have helped me enhance my coding skills and problem-solving abilities.
 
 My expertise lies in designing and building efficient solutions, with a keen interest in web development and software engineering. Through hands-on experience, I have developed projects that demonstrate my ability to work with various technologies and frameworks.
 
 I am always eager to learn and explore new advancements in AI, machine learning, and development. My goal is to leverage my skills to create impactful and innovative solutions in the tech industry.
                     </p>
-                    <button className="explore-btn fade-in">
-                        Explore <FaArrowRight className="arrow-icon" />
+                    </div>
+                    <button className="explore-btn fade-in"
+                    onClick={() => document.getElementById("pageTwo")?.scrollIntoView({ behavior: "smooth" })}
+>
+    Explore <FaArrowRight className="arrow-icon" />
+
                     </button>
                 </div>
             </div>

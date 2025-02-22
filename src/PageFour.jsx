@@ -2122,8 +2122,8 @@ const ContactForm = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         >
           <div className="vertical-text">
-            <span className="word">Let's</span>
-            <span className="word1">Connect</span>
+            <span className="merriweather-black" style={{lineHeight: 1.6,color: "#87CEEB",fontSize:60}}>Let's</span>
+            <span className="merriweather-black" style={{lineHeight: 1.6,color: "#87CEEB",fontSize:60}}>Connect</span>
           </div>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -2162,6 +2162,7 @@ const ContactForm = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 required
+                className="cabin"
               />
               <input
                 type="email"
@@ -2169,6 +2170,7 @@ const ContactForm = () => {
                 placeholder="Email Address"
                 value={formData.email}
                 onChange={handleChange}
+                className="cabin"
                 required
               />
             </div>
@@ -2178,6 +2180,7 @@ const ContactForm = () => {
               placeholder="Email Subject"
               value={formData.subject}
               onChange={handleChange}
+              className="cabin"
               required
             />
             <textarea
@@ -2186,6 +2189,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              className="cabin"
             />
 
             <center>
@@ -2196,172 +2200,7 @@ const ContactForm = () => {
           </form>
         </motion.div>
       </motion.div>
-      <style jsx>{`
-        .contact-wrapper {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          // background-color: #1A1A1D;
-          background:linear-gradient(to right, #1A1A1D, #191970);
-          padding: 20px;
-          
-        }
-
-        .contact-box {
-          display: flex;
-          flex-direction: row;
-          background: #181818;
-          padding: 40px;
-          border-radius: 15px;
-          max-width: 1000px;
-          width: 100%;
-          margin: auto;
-          box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-        }
-
-        .left-box,
-        .right-box {
-          flex: 1;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .left-box {
-          border-right: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .vertical-text {
-          display: flex;
-          flex-direction: column;
-          font-size: 60px;
-          font-weight: bold;
-          text-align: center;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-        }
-
-        .word {
-          line-height: 1.6;
-          color: #87CEEB;
-        }
-
-        .word1 {
-          line-height: 1.6;
-          color: white;
-        }
-
-        .social-icons {
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          margin-bottom: 20px;
-        }
-
-        .social-icons a {
-          color: white;
-          font-size: 24px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .social-icons a:hover {
-          transform: scale(1.1);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .bright-button1 {
-          background-color: #87CEEB;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 18px;
-          transition: all 0.3s ease;
-        }
-
-        .bright-button1:hover {
-          background: #87CEEB;
-          transform: scale(1.05);
-        }
-
-        .right-box form {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .input-group {
-          display: flex;
-          flex-direction:column;
-          gap: 20px;
-        }
-
-        input,
-        textarea {
-          width: 100%;
-          padding: 12px;
-          border: none;
-          border-radius: 5px;
-          background: #333;
-          color: white;
-          font-size: 16px;
-        }
-
-        textarea {
-          height: 120px;
-          resize: none;
-          margin-top:15px
-        }
-
-        .bright-button1 {
-          background-color: #87CEEB;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 18px;
-          transition: all 0.3s ease;
-        }
-
-        .bright-button:hover {
-          background: #87CEEB;
-          transform: scale(1.05);
-        }
-
-        .toast {
-          position: fixed;
-          top: 10px;
-          right: 20px;
-          background-color: black;
-          color: white;
-          padding: 10px 20px;
-          border-radius: 5px;
-          font-size: 16px;
-          z-index: 1000;
-          border: 2px solid #87CEEB;
-          opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-          .contact-box {
-            flex-direction: column;
-            text-align: center;
-          }
-
-          .left-box {
-            border-right: none;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
-          }
-
-          .input-group {
-            flex-direction: column;
-          }
-        }
-        
-      `}</style>
+     
     </motion.div>
   );
 };
