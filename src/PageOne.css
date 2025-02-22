@@ -217,14 +217,27 @@
   .para{
     font-size: 20px;
   }
-  .div11 {
-    margin: 0; /* Remove all margins */
-    padding: 0; /* Ensure no extra spacing */
-}
-.hello, .typing-effect, .name, .para {
-  margin: 0;
-  padding: 0;
 }
 
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
+  .hero-section { /* Adjust the container holding the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Make it take full screen height */
+    text-align: center;
+    padding-top: 0; /* Remove any padding pushing it down */
+  }
+
+  .hero-text { /* Your "Hello, it's Me" section */
+    margin-top: 0 !important; /* Remove unwanted space */
+    padding-top: 0 !important;
+  }
 }
+
