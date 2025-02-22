@@ -95,7 +95,7 @@ const Certifications = () => {
                                         backgroundColor: '#87CEEB',
                                         padding: '5px 10px',
                                         textDecoration: 'none',
-                                        borderRadius: '1px',
+                                        borderRadius: '5px',
                                     }}
                                 >
                                     Download
