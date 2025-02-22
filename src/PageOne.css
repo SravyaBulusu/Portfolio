@@ -217,4 +217,14 @@
   .para{
     font-size: 20px;
   }
+  .div11 {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Ensure no extra spacing */
+}
+.hello, .typing-effect, .name, .para {
+  margin: 0;
+  padding: 0;
+}
+
+
 }
