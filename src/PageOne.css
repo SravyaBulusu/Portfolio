@@ -199,6 +199,9 @@
 
 
 @media (max-width: 768px) { /* Adjust for mobile screens */
+  .div1{
+    margin-top: 0;
+  }
   .div2 {
     display: none; /* Hides the animation on small screens */
   }
