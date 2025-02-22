@@ -2139,7 +2139,7 @@ const ContactForm = () => {
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
-          <a href="Resume.pdf" download="Sravya_Resume.pdf">
+          <a href="my_resume.pdf" download="Sravya_Resume.pdf">
             <button className="bright-button1">Download Resume</button>
           </a>
         </motion.div>
