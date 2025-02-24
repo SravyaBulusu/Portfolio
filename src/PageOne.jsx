@@ -46,7 +46,7 @@ function PageOne() {
 
 
 
-  const texts = ["I am a Web Developer.","I am AI Enthusiast"]; // Texts to display
+  const texts = ["I am a Web Developer.", "I am AI Enthusiast"]; // Texts to display
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -96,14 +96,19 @@ function PageOne() {
         <div id="sparkle-container" className="sparkle-container" ></div>
         <div className="div1">
           <div className="div11">
-            <h1 className="hello">Hello, it's Me</h1>
-            <h1 className="name">
+            <p className="hello">Hello, it's Me</p>
+            <p className="name">Sravya Bulusu</p>
+            <p className="typing-effect">
+              {currentText}
+              <span className="cursor"></span>
+            </p>
+            {/* <h1 className="name">
               Sravya Bulusu
             </h1>
             <h1 className="typing-effect">
               {currentText}
               <span className="cursor"></span>
-            </h1>
+            </h1> */}
             <p className="para">
               Creative and detail-oriented developer passionate about building<span></span>
               user-friendly,scalable, and efficient web applications.
@@ -132,8 +137,6 @@ function PageOne() {
               Download Resume
             </a>
 
-           
-
           </div>
         </div>
         <div className="div2">
@@ -143,7 +146,7 @@ function PageOne() {
             src="lottie_blue.json"
             loop
             autoplay
-            style={{height:500,width:1400,position:"relative",top:-100}}
+            style={{ height: 500, width: 1400, position: "relative", top: -100 }}
           />
 
         </div>

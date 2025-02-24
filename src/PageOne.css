@@ -194,6 +194,7 @@
 
   .hello{
     font-size: 40px;
+    font-weight: bold;
   }
   
 
@@ -246,4 +247,11 @@
     padding-top: 0 !important;
   }
 }
+
+
+
+
+
+
+
 

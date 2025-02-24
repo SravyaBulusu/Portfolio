@@ -2126,16 +2126,16 @@ const ContactForm = () => {
             <span className="merriweather-black" style={{lineHeight: 1.6,color: "white",fontSize:60}}>Connect</span>
           </div>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
+            </a> */}
+            <a href="https://gmail.com" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
+            <a href="https://github.com/SravyaBulusu" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/sravya-bulusu-74b236258/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
