@@ -119,7 +119,7 @@ function PageOne() {
             {/* Download Resume Button */}
 
             <a
-              href="/res.pdf"
+              href="resume.pdf"
               download="Sravya_Resume.pdf"
               className="bright-button1"
               style={{
