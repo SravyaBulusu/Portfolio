@@ -1,8 +1,18 @@
-# React + Vite
+# 💼 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio to showcase my projects, skills, and experience. Built with responsive UI and clean sections for About, Projects, and Contact.
 
-Currently, two official plugins are available:
+## 🌟 Features
+- Responsive design for all screens
+- Projects showcase with GitHub links
+- About Me and Contact sections
+- Navigation bar with smooth scroll
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React js
+
+## 🌐 Live Site
+> [Click here to visit](https://portfolio-sravyabulusu.vercel.app/)  
+
+## ✅ Status
+Hosted and working as expected.
